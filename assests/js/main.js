@@ -1,3 +1,4 @@
+
 /*========================== MENU SHOW Y HIDDEN =================================*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
@@ -35,6 +36,30 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*========================== ACCORDION SKILLS =================================*/
+const skillsContent = document.getElementsByClassName('skills__content'), /* getElementsByClassName은 클래스의 이름을 알고 있거나 이 클래스가 적용된 엘리먼트를 문서 전체에서 찾고 싶을때 사용합니다. */
+      skillsHeader = document.querySelectorAll('skills__header') /* querySelector와 사용 방법은 동일하며 선택자를 선택하여 배열과 비슷한 객체인 nodeList를 반환합니다. 반환객체가 nodeList이기에 for문 또는 forEach문을 사용합니다. */
+
+function toggleSkills(){
+    let itemClass = this.parentNode.ClassName  
+    /* 특정 엘리먼트의 부모노드에 접근할 때 parentNode를 사용합니다. */
+
+    for(i = 0; i < skillsContent.length; i++){
+        skillsContent[i].className = 'skills__content skills__close'
+    }
+    if(itemClass === 'skills__content skills__close'){ /* data값과 data형이 같은지 체크 */
+        this.parentNode.className = 'skills__content skills__open'
+    }
+}
+
+skillsHeader.forEach((el) => {
+    el.addEventListener('click', toggleSkills)
+})
+/* array.forEach(function(currentValue, index, arr)); */
+/* function(currentValue, index, arr) - 배열의 각 항목에 대해 실행할 함수
+ * currentValue - 배열의 값
+ * index (선택 사항) - 현재 항목의 인덱스
+ * arr (선택 사항) - 현재 항목의 배열
+ */
 
 /*========================== QUALFICATION TABS =================================*/
 
