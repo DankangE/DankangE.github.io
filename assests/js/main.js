@@ -37,10 +37,10 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*========================== ACCORDION SKILLS =================================*/
 const skillsContent = document.getElementsByClassName('skills__content'), /* getElementsByClassName은 클래스의 이름을 알고 있거나 이 클래스가 적용된 엘리먼트를 문서 전체에서 찾고 싶을때 사용합니다. */
-      skillsHeader = document.querySelectorAll('skills__header') /* querySelector와 사용 방법은 동일하며 선택자를 선택하여 배열과 비슷한 객체인 nodeList를 반환합니다. 반환객체가 nodeList이기에 for문 또는 forEach문을 사용합니다. */
+      skillsHeader = document.querySelectorAll('.skills__header') /* querySelector와 사용 방법은 동일하며 선택자를 선택하여 배열과 비슷한 객체인 nodeList를 반환합니다. 반환객체가 nodeList이기에 for문 또는 forEach문을 사용합니다. */
 
 function toggleSkills(){
-    let itemClass = this.parentNode.ClassName  
+    let itemClass = this.parentNode.className
     /* 특정 엘리먼트의 부모노드에 접근할 때 parentNode를 사용합니다. */
 
     for(i = 0; i < skillsContent.length; i++){
@@ -51,7 +51,7 @@ function toggleSkills(){
     }
 }
 
-skillsHeader.forEach((el) => {
+skillsHeader.forEach((el) =>{
     el.addEventListener('click', toggleSkills)
 })
 /* array.forEach(function(currentValue, index, arr)); */
@@ -62,5 +62,23 @@ skillsHeader.forEach((el) => {
  */
 
 /*========================== QUALFICATION TABS =================================*/
+const tabs = document.querySelectorAll('[data-target]'),
+      tabContent = document.querySelectorAll('[data-content]')
+
+tabs.forEach((tab) =>{
+    tab.addEventListener('click', () =>{
+        const target = document.querySelector(tab.dataset.target)
+
+        tabContent.forEach((tabContent) =>{
+            tabContent.classList.remove('qualification__active')
+        })
+        target.classList.add('qualification__active')
+
+        tab.forEach((tab) =>{
+            tab.classList.remove('qualification__active')
+        })
+        tab.classList.add('qualification__active')
+    })
+})
 
 /*========================== SERVICES MODAL =================================*/
