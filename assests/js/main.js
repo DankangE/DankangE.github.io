@@ -125,10 +125,10 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
     grabCursor: true,
     spaceBetween: 48,
     
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -136,7 +136,7 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
     },
     breakpoints: {
         568:{     // 568px 이상은 2개
-            slidersPerView: 2,
+            slidesPerView: 2,
         }
     }
 });
