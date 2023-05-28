@@ -10,7 +10,7 @@
     /*========= Colors =========*/
     /*HSL : Hue, Saturation, Lightness
       Hue - 색조,  Saturation - 채도,  Lightness - 밝기*/
-    --hue-color: 275;  /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 270;  /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
     /*참조 : https://www.w3schools.com/colors/colors_hsl.asp*/
@@ -529,10 +529,10 @@
 }
 
 .skills__php {
-    width: 25%;
+    width: 5%;
 }
 .skills__njs {
-    width: 25%;
+    width: 5%;
 }
 .skills__sql {
     width: 25%;
