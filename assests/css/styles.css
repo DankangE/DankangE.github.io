@@ -516,23 +516,27 @@
 }
 
 .skills__html {
-    width: 50%;
+    width: 75%;
 }
 .skills__css {
     width: 50%;
 }
 .skills__jsp {
-    width: 25%;
+    width: 50%;
 }
 .skills__react {
+    width: 50%;
+}
+.skills__next {
     width: 25%;
 }
+
 
 .skills__php {
     width: 5%;
 }
 .skills__njs {
-    width: 5%;
+    width: 25%;
 }
 .skills__sql {
     width: 25%;
@@ -546,6 +550,9 @@
 }
 
 .skills__xd {
+    width: 5%;
+}
+.skills__figma {
     width: 5%;
 }
 
